@@ -10,4 +10,6 @@ import id.harist.batchingmultipledb.dto.PeopleDto;
  */
 public interface PeopleDao {
     int saveNewData(PeopleDto peopleDto);
+
+    int countData();
 }
