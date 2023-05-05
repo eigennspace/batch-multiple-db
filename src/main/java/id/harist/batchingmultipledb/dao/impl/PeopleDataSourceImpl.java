@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 public class PeopleDataSourceImpl implements PeopleDataSource {
 
     @Autowired
-    @Qualifier("amorJdbcTemplate")
+    @Qualifier("peopleJdbcTemplate")
     private JdbcTemplate jdbcTemplate;
 
     @Override

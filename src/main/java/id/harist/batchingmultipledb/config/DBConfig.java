@@ -28,15 +28,15 @@ public class DBConfig {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean(name = "amorDataSource")
-    @ConfigurationProperties(prefix = "spring.datasourceamor")
-    public DataSource amorDataSource(){
+    @Bean(name = "peopleDataSource")
+    @ConfigurationProperties(prefix = "spring.datasourcepeople")
+    public DataSource peopleDataSource(){
         return DataSourceBuilder.create().build();
     }
 
     @Autowired
-    @Bean(name = "amorJdbcTemplate")
-    public JdbcTemplate amorJdbcTemplate(@Qualifier("amorDataSource") DataSource dataSource){
+    @Bean(name = "peopleJdbcTemplate")
+    public JdbcTemplate peopleJdbcTemplate(@Qualifier("peopleDataSource") DataSource dataSource){
         return new JdbcTemplate(dataSource);
     }
 
